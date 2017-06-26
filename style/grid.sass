@@ -1,0 +1,22 @@
+$n: 12
+
+=col($bp)
+  @for $i from 1 through $n
+    .col#{$bp}-#{$i}
+      flex: 0 0 (100% * $i / $n)
+      min-height: 1px
+
++col('')
+
++media-breakpoint-up(mobile)
+  +col(-tablet)
+
++media-breakpoint-up(tablet)
+  +col(-desktop)
+
+.row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+.col
+  flex-direction: column
