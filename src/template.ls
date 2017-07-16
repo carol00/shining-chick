@@ -19,7 +19,7 @@ function render-html {head, body: {styles=[] scripts=[]}=[]}
     ...(body.scripts || [])map script
 
 head =
-  title: \shiningChick
+  title: \shining-chick
   meta:
     \mobile-web-app-capable : \yes
     \theme-color : \#000

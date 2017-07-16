@@ -1,0 +1,81 @@
+.chick
+  position: relative
+  .body
+    +shape(9rem, 10rem, 50% 50% 15% 15%)
+    margin: 0 auto
+    box-shadow: 1px 2px 3px #929191
+    background: linear-gradient(to bottom, #dff533 65%, #6dadb7 0)
+    .eggshell
+      +shape(5rem, 1.5rem, 50% 50% 20% 20%)
+      margin: 0 auto
+      text-align: center
+      background: #f7f7f7
+      div
+        display: inline-block
+        margin-top: 8px
+        div
+          border-style: solid
+          border-width: 0 8px 10px 8px
+          border-color: transparent transparent  #e2fa22 transparent
+    .eyes
+      margin-top: 1.5rem
+      text-align: center
+      div
+        display: inline-block
+        +shape(1.5rem, 1.5rem, 50%)
+        position: relative
+        margin: 0 0.5rem 0 0
+        border: 1px #d3d3d3 solid
+        background: #FFF
+        &:last-of-type
+          margin: 0 0 0 0.5rem
+        &:after
+          content: ''
+          +shape(1rem, 1rem, 50%)
+          position: absolute
+          transform: translate(-6px, 5px)
+          background: #000
+    .mouth
+      width: 2rem
+      height: 2rem
+      margin: -0.5rem auto 0 auto
+      div:first-of-type
+        border-style: solid
+        border-width: 0 15px 15px 15px
+        border-color: transparent transparent #e89e31 transparent
+      div:last-of-type
+        border-style: solid
+        border-width: 7px 10px 0 10px
+        border-color: #a56b15 transparent transparent transparent
+    .hand
+      padding: 0 0.5rem
+      div
+        +shape(1.5rem, 2rem, 0.5rem)
+        display: inline-block
+        transform: rotate(-45deg)
+        background: linear-gradient(to bottom, #dff533 65%, #b46b6b 0)
+        &:last-of-type
+          float: right
+          transform: rotate(45deg)
+
+  .feet
+    width: 100%
+    display: inline-block
+    text-align: center
+    div
+      +shape(0.5rem, 2rem, 0.5rem)
+      position: relative
+      display: inline-block
+      margin: 0 1.5rem 0 0
+      background: #171717
+      &:last-of-type
+        margin: 0 0 0 1.5rem
+      &:before, &:after
+        content: ''
+        +shape(0.5rem, 1.5rem, 0.5rem)
+        position: absolute
+        transform: rotate(55deg) translate(-10px, 10px)
+        bottom: 0
+        background: #171717
+      &:after
+        transform: rotate(-55deg) translate(5px,5px)

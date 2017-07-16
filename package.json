@@ -1,5 +1,5 @@
 {
-  "name": "shiningChick",
+  "name": "shining-chick",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -7,8 +7,8 @@
     "test": "nyc --instrument false lsc test/start",
     "posttest": "nyc report -r lcov -r json"
   },
-  "repository": "carol00/shiningChick",
-  "license": "Unlicense",
+  "repository": "carol00/shining-chick",
+  "license": "license",
   "files": [
     "www",
     "server.js"
