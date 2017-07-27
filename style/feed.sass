@@ -9,8 +9,24 @@
       margin: 0 auto
       border: 1px #d8cf7f solid
       background: #e5e8b0
-  .rice
-    +shape(1rem, 0.4rem, 50%)
-    display: inline-block
-    box-shadow: 2px 1px 0px rgb(213, 213, 213)
-    background: #f9f9f9
+  .bowl
+    .inside
+      +shape(10rem, 5rem, 2% 2% 50% 50%)
+      position: relative
+      box-shadow: 2px 2px 3px #b0afaf
+      background: rgba(247, 247, 247, 0.41)
+    .bottom
+      +shape(5rem, 1rem, 0 0 50% 50%)
+      margin: -0.3rem 0 0 2.5rem
+      box-shadow: 0 2px 4px #b0afaf
+      background: rgba(199, 194, 194, 0.18)
+    .rice
+      +shape(100%, 100%, 0)
+      position: absolute
+      display: flex
+      justify-content: center
+      top: -0.2rem
+      span
+        +shape(0.7rem, 0.3rem, 50%)
+        box-shadow: 2px 1px 0px rgb(213, 213, 213)
+        background: #f9f9f9
