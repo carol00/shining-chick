@@ -1,14 +1,15 @@
 import {h} from './link'
 
-export default props =>
+export default () =>
 <div class="identity">
   <div class="item">
-    <label>名字：</label><input />
+    <label>Name：</label><input />
   </div>
   <div class="item">
-    <label>生日：</label><input />
+    <label>Birthday：</label><span>2017-07-29 18:26</span>
   </div>
   <div class="item">
-    <label>體重：</label><input />
+    <label>Weight：</label><span>1kg</span>
   </div>
+  <button class="btn">Creat</button>
 </div>
