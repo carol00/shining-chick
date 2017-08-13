@@ -11,7 +11,7 @@ function merge-data state, {key, items}
 function compose-reduce
   handlers =
     data: handle-actions load: merge-data
-    identity: handle-actions {}
+    profile: handle-actions {}
   combine-reducers handlers
 
 export default: compose-reduce

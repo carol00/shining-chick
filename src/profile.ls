@@ -1,10 +1,10 @@
 import
   \./link : {link}
-  \./identity-display : identity-display
+  \./profile-screen : profile-screen
 
-function identity-state {identity}
-  identity
+function profile-state {profile}
+  profile
 
-Identity = link identity-display, identity-state
+Profile = link profile-screen, profile-state
 
-export {identity-state, Identity}
+export {profile-state, Profile}

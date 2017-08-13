@@ -1,5 +1,5 @@
 import {h} from './link'
-import {Identity} from './identity'
+import {Profile} from './profile'
 
 export default ({name, birthday, weight}) =>
 <div class="identity">

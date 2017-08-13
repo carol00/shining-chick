@@ -1,5 +1,5 @@
 function preload-state
-  identity:
+  profile:
     name: \babo
     birthday: '2017-07-29 18:26'
     weight: \1
