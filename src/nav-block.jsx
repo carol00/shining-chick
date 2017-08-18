@@ -1,8 +1,11 @@
 import {h} from './link'
 
-export default () =>
+export default ({items}) =>
 <nav>
-  <div><span class="fa fa-home"></span><p>Home</p></div>
-  <div><span class="fa fa-id-card"></span><p>Profile</p></div>
-  <div><span class="fa fa-cutlery"></span><p>Feed</p></div>
+  {items.map(({name, icon, onClick, style}) =>
+    <div onClick={onClick} class={style}>
+      <span class={icon}></span>
+      <p>{name}</p>
+    </div>
+  )}
 </nav>
