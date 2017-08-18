@@ -3,7 +3,7 @@ import {h} from './link'
 const Curve = () =>
 <div class="curve">
   {Array.from({length: 6}).map(() =>
-    <span></span>
+    <span class="burst"></span>
   )}
 </div>
 

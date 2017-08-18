@@ -19,8 +19,9 @@ $egg-split-angle: 43deg
       position: absolute
       transform-origin: left
       transform: rotate($egg-split-angle)
+      opacity: 0
       background: #d6d6d6
-    &:nth-of-type(2n+2):after
+    &:nth-of-type(2n+2)::after
       transform: rotate(-$egg-split-angle)
 
 .shake-horizontal
@@ -32,3 +33,9 @@ $egg-split-angle: 43deg
     transform: rotate(5deg)
   100%
     transform: rotate(-5deg)
+
+.burst
+  @for $i from 1 through 6
+    &:nth-of-type(6n+#{$i})::after
+      opacity: 1
+      transition: opacity #{3+$i}s
