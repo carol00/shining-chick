@@ -1,7 +1,7 @@
 import {h} from './link'
 import {Profile} from './profile'
 
-export default ({name, birthday, weight}) =>
+export default ({name, birthday, weight, onClick}) =>
 <div class="identity">
   <div class="item">
     <label>Name：</label><input placeholder={name} />
@@ -12,5 +12,5 @@ export default ({name, birthday, weight}) =>
   <div class="item">
     <label>Weight：</label><span>{weight}kg</span>
   </div>
-  <button class="btn">Creat</button>
+  <button class="btn" onClick={onClick}>Create</button>
 </div>
