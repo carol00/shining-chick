@@ -1,44 +1,49 @@
+$chick-body: 13rem
+$chick-eyes: 2.5rem
+$chick-mouth: 2.5rem
+$chick-hand: 2.5rem
+$chick-feet: 0.6rem
+
 .chick
   position: relative
   .body
-    +shape(9rem, 10rem, 50% 50% 15% 15%)
+    +shape($chick-body, $chick-body, 50% 50% 15% 15%)
     margin: 0 auto
     box-shadow: 1px 2px 3px #929191
     background: linear-gradient(to bottom, #dff533 65%, #6dadb7 0)
     .eggshell
-      +shape(5rem, 1.5rem, 50% 50% 20% 20%)
+      +shape(9rem, 2rem, 50% 50% 20% 20%)
       margin: 0 auto
       text-align: center
       background: #f7f7f7
       div
         display: inline-block
-        margin-top: 8px
+        margin-top: 11px
         div
           border-style: solid
-          border-width: 0 8px 10px 8px
+          border-width: 0 10px 12px 10px
           border-color: transparent transparent  #e2fa22 transparent
     .eyes
       margin-top: 1.5rem
       text-align: center
       div
         display: inline-block
-        +shape(1.5rem, 1.5rem, 50%)
+        +shape($chick-eyes, $chick-eyes, 50%)
         position: relative
-        margin: 0 0.5rem 0 0
-        border: 1px #d3d3d3 solid
+        margin: 1rem 0.5rem 0 0
+        border: 1px #e4e4e4 solid
         background: #FFF
         &:last-of-type
           margin: 0 0 0 0.5rem
         &:after
           content: ''
-          +shape(1rem, 1rem, 50%)
+          +shape(#{$chick-eyes - 1rem}, #{$chick-eyes - 1rem}, 50%)
           position: absolute
-          transform: translate(-6px, 5px)
+          transform: translate(-10px, 10px)
           background: #000
     .mouth
-      width: 2rem
-      height: 2rem
-      margin: -0.5rem auto 0 auto
+      +shape($chick-mouth, #{$chick-mouth - 1rem}, 0)
+      margin: 0 auto
       div:first-of-type
         border-style: solid
         border-width: 0 15px 15px 15px
@@ -50,7 +55,7 @@
     .hand
       padding: 0 0.5rem
       div
-        +shape(1.5rem, 2rem, 0.5rem)
+        +shape($chick-hand, $chick-hand, 0.5rem)
         display: inline-block
         transform: rotate(-45deg)
         background: linear-gradient(to bottom, #dff533 65%, #b46b6b 0)
@@ -63,7 +68,7 @@
     display: inline-block
     text-align: center
     div
-      +shape(0.5rem, 2rem, 0.5rem)
+      +shape($chick-feet, #{$chick-feet + 2rem}, 0.5rem)
       position: relative
       display: inline-block
       margin: 0 1.5rem 0 0
@@ -72,9 +77,9 @@
         margin: 0 0 0 1.5rem
       &:before, &:after
         content: ''
-        +shape(0.5rem, 1.5rem, 0.5rem)
+        +shape($chick-feet,  #{$chick-feet + 1.3rem}, 0.5rem)
         position: absolute
-        transform: rotate(55deg) translate(-10px, 10px)
+        transform: rotate(55deg) translate(-13px, 13px)
         bottom: 0
         background: #171717
       &:after

@@ -1,41 +1,27 @@
-$egg-split-angle: 43deg
+$egg: 14rem
+$burst-angle: 36deg
 
 .egg
-  +shape(10rem, 15rem, 50% 50% 35% 35%)
+  +shape($egg, #{$egg + 6rem}, 50% 50% 35% 35%)
   display: flex
   align-items: center
   box-shadow: 3px 3px 4px #b3b3b3
   background: #f6f6f6
+  display: none
 .curve
   +shape(100%, 0, 0)
   display: flex
-  margin-left: 0.7rem
+  margin-left: 1.1rem
   span
-    +shape(2rem, 3rem, 0)
+    +shape(2.5rem, 3rem, 0)
     flex: 1
     &::after
       content: ''
-      +shape(0.2rem, 2.5rem, 0)
+      +shape(0.2rem, 4rem, 0)
       position: absolute
       transform-origin: left
-      transform: rotate($egg-split-angle)
+      transform: rotate($burst-angle)
       opacity: 0
       background: #d6d6d6
     &:nth-of-type(2n+2)::after
-      transform: rotate(-$egg-split-angle)
-
-.shake-horizontal
-  animation: shake-horizontal 0.2s ease infinite
-@keyframes shake-horizontal
-  0%
-    transform: rotate(0)
-  50%
-    transform: rotate(5deg)
-  100%
-    transform: rotate(-5deg)
-
-.burst
-  @for $i from 1 through 6
-    &:nth-of-type(6n+#{$i})::after
-      opacity: 1
-      transition: opacity #{3+$i}s
+      transform: rotate(-$burst-angle)
