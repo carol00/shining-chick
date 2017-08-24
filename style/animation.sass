@@ -1,0 +1,23 @@
+.shake-horizontal
+  animation: shake-horizontal 0.2s ease infinite
+@keyframes shake-horizontal
+  0%
+    transform: rotate(0)
+  50%
+    transform: rotate(5deg)
+  100%
+    transform: rotate(-5deg)
+
+.burst
+  @for $i from 1 through 6
+    &:nth-of-type(6n+#{$i}):after
+      opacity: 1
+      transition: opacity #{3+$i}s
+
+.chick
+  animation: jump 0.2s ease-in infinite
+@keyframes jump
+  50%
+    transform: translate(0, -2px)
+  100%
+    transform: translate(0, 0)

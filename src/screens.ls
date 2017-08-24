@@ -1,5 +1,5 @@
 import
-  \./home-screen : home
+  \./home : {home}
   \./profile : {Profile}
   \./feed-screen : feed
 
