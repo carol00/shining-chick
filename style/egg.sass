@@ -27,8 +27,12 @@ $burst-angle: 41deg
     &:nth-of-type(2n+2)::after
       transform: rotate(-$burst-angle)
 
-.burst > span
+.burst span
   @for $i from 1 through 6
     &:nth-of-type(6n+#{$i}):after
       opacity: 1
-      transition: opacity #{3+$i}s
+      transition: 2s opacity
+
+.egg.burst
+  transition: 1s opacity 1s
+  opacity: 0
