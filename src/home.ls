@@ -1,10 +1,13 @@
 import
   \./link : {link}
   \./home-screen : home-screen
+  \./profile : {profile-state, input-name, create}
 
-function home-state {profile}
- name: profile.name
+function home-props {name}, bind-action
+  on-click: bind-action create
+  on-change: bind-action input-name
+  name: name
 
-home = link home-screen, home-state
+Home = link home-screen, profile-state, home-props
 
-export {home-state, home}
+export {Home, home-props}

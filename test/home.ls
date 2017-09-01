@@ -1,12 +1,21 @@
-import \../src/home : {home-state}
+import \../src/home : {home-props}
+import \../test/mock : {mock-bind}
 
 function main t
-  state =
-    profile: name: \babo
+  profile = name: \babo
 
-  actual = home-state state
-  expected = name: \babo
-  t.deep-equal actual, expected, 'take the state to home'
+  props = home-props profile, mock-bind
+  actual = props.on-click
+  expected = type: \create
+  t.deep-equal actual, expected, 'click to create a chick'
+
+  actual = props.on-change
+  expected = type: \input-name payload: \ha
+  t.deep-equal actual, expected, 'save the name'
+
+  actual = props.name
+  expected = \babo
+  t.equal actual, expected, 'name for display'
 
   t.end!
 

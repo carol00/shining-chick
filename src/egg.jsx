@@ -1,13 +1,13 @@
 import {h} from './link'
 
-const Curve = () =>
-<div class="curve">
+const Curve = ({active}) =>
+<div class={'curve ' + (active? 'burst':'')}>
   {Array.from({length: 6}).map(() =>
-    <span class="burst"></span>
+    <span></span>
   )}
 </div>
 
-export default () =>
+export default ({active}) =>
 <div class="egg shake-horizontal">
-  <Curve />
+  <Curve active={active}/>
 </div>

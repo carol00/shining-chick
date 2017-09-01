@@ -1,6 +1,6 @@
 import {h} from './link'
 
-export default ({value=10}) =>
+export default ({value}) =>
 <div class="indicator">
   <div>
     {Array.from({length: value}).map(() =>

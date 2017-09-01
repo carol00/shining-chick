@@ -1,19 +1,20 @@
-$egg: 14rem
-$burst-angle: 36deg
+$egg: 16rem
+$egg-height: 22rem
+$burst-angle: 41deg
 
 .egg
-  +shape($egg, #{$egg + 6rem}, 50% 50% 35% 35%)
+  +shape($egg, $egg-height, 50% 50% 35% 35%)
   display: flex
   align-items: center
+  margin: 0 auto
   box-shadow: 3px 3px 4px #b3b3b3
   background: #f6f6f6
-  display: none
 .curve
   +shape(100%, 0, 0)
   display: flex
-  margin-left: 1.1rem
+  margin-left: 1.2rem
   span
-    +shape(2.5rem, 3rem, 0)
+    +shape(3rem, 3rem, 0)
     flex: 1
     &::after
       content: ''
@@ -25,3 +26,9 @@ $burst-angle: 36deg
       background: #d6d6d6
     &:nth-of-type(2n+2)::after
       transform: rotate(-$burst-angle)
+
+.burst > span
+  @for $i from 1 through 6
+    &:nth-of-type(6n+#{$i}):after
+      opacity: 1
+      transition: opacity #{3+$i}s

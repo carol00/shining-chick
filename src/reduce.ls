@@ -2,7 +2,7 @@ import
   redux: {combine-reducers}
   linking: {handle-actions}
   \./location : updaters: location
-  \./profile : updaters: profile
+  \./profile : updaters: create
 
 empty = {}
 
@@ -14,7 +14,7 @@ function compose-reduce
   handlers =
     data: handle-actions load: merge-data
     location: handle-actions location
-    profile: handle-actions profile
+    profile: handle-actions create
   combine-reducers handlers
 
 export default: compose-reduce

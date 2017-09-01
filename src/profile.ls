@@ -2,14 +2,20 @@ import
   \./link : {link}
   \./profile-screen : profile-screen
 
-updaters = create: (, {name}) -> {name}
+create = type: \create
+
+updaters =
+  create: ({input}) -> name: input
+  \input-name : (, payload) -> input: payload
 
 function profile-state {profile}
-  profile
+  name: profile.name
+  birthday: profile.birthday
+  satisfaction: profile.satisfaction
 
-function profile-props {} bind-action
-  on-click: bind-action type: \create payload: name: \babo
+function input-name target: {value}
+  type: \input-name payload: value
 
-Profile = link profile-screen, profile-state, profile-props
+Profile = link profile-screen, profile-state
 
-export {profile-state, Profile, profile-props, updaters}
+export {profile-state, Profile, updaters, input-name, create}
