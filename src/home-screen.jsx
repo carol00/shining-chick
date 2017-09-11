@@ -13,7 +13,7 @@ const Create = ({name, onClick, onChange}) =>
 const Name = ({name}) =>
 <p>{name}</p>
 
-export default ({name, onClick, onChange}) =>
+export default ({name, onClick, onChange, satisfaction}) =>
 <div class="home">
   {name?
     <Name name={name}/>:
@@ -23,7 +23,7 @@ export default ({name, onClick, onChange}) =>
     <Egg active={name}/>
     <div class="actor">
       <Chick />
-      <Indicator value="5" />
+      <Indicator value={satisfaction} />
     </div>
   </div>
 </div>

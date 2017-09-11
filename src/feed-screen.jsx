@@ -1,28 +1,11 @@
 import {h} from './link'
 
-const Plate = () =>
-<div class="plate">
-  <div class="inside">
-  </div>
-</div>
-
-const Bowl = () =>
-<div class="bowl">
-  <div class="inside">
-    <Rice />
-  </div>
-  <div class="bottom"></div>
-</div>
-
-const Rice = () =>
-<div class="rice">
-  {Array.from({length: 13}).map(() =>
-    <span></span>
-  )}
-</div>
-
-export default () =>
+export default ({items}) =>
 <div class="feed">
-  <Bowl />
-  <Plate />
+  {items.map(({name, onClick, food}) =>
+    <div onClick={onClick}>
+      <p>{name}</p>
+      {food}
+    </div>
+  )}
 </div>

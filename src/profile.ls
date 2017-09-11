@@ -4,9 +4,13 @@ import
 
 create = type: \create
 
+initial-satifaction = 5
+
 updaters =
-  create: ({input}) -> name: input
+  create: ({input}) -> name: input, satisfaction: initial-satifaction
   \input-name : (, payload) -> input: payload
+  feed: (state, payload) ->
+    satisfaction: state.satisfaction + payload.satisfaction
 
 function profile-state {profile}
   name: profile.name

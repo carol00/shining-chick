@@ -3,10 +3,11 @@ import
   \./home-screen : home-screen
   \./profile : {profile-state, input-name, create}
 
-function home-props {name}, bind-action
+function home-props profile, bind-action
   on-click: bind-action create
   on-change: bind-action input-name
-  name: name
+  name: profile.name
+  satisfaction: profile.satisfaction
 
 Home = link home-screen, profile-state, home-props
 

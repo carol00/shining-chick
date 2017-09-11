@@ -15,6 +15,7 @@ function compose-reduce
     data: handle-actions load: merge-data
     location: handle-actions location
     profile: handle-actions create
+    feed: handle-actions {}
   combine-reducers handlers
 
 export default: compose-reduce

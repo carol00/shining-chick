@@ -2,7 +2,7 @@ import \../src/home : {home-props}
 import \../test/mock : {mock-bind}
 
 function main t
-  profile = name: \babo
+  profile = name: \babo satisfaction: 5
 
   props = home-props profile, mock-bind
   actual = props.on-click
@@ -16,6 +16,10 @@ function main t
   actual = props.name
   expected = \babo
   t.equal actual, expected, 'name for display'
+
+  actual = props.satisfaction
+  expected = 5
+  t.equal actual, expected, 'satisfaction for display'
 
   t.end!
 
