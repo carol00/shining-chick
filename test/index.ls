@@ -1,7 +1,14 @@
 import tape: test
 
+cases =
+  location: \Location
+  home: \Home
+  profile: \Profile
+
+
 function main
-  test \test (t) ->
-    t.end!
+  Object.entries cases .for-each ([path, name]) ->
+    fn = require "./#path" .default
+    test name, fn
 
 main!
