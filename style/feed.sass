@@ -1,14 +1,24 @@
 .feed
+  .items
+    > div div
+      text-align: center
+    img
+      width: 100%
+      max-width: 180px
   .plate
-    +shape(16rem, 10rem, 50%)
+    +shape(14rem, 10rem, 50%)
     padding: 1.5rem 0
     box-shadow: 0px 5px 5px #a2a2a2
-    background: #e2e6a1
+    background: #e2e2e2
     .inside
-      +shape(12rem, 7rem, 50%)
+      position: relative
+      +shape(10rem, 7rem, 50%)
+      display: flex
+      align-items: center
+      justify-content: center
       margin: 0 auto
-      border: 1px #d8cf7f solid
-      background: #e5e8b0
+      border: 1px #cacaca solid
+      background: #eaeaea
   .bowl
     .inside
       +shape(10rem, 5rem, 2% 2% 50% 50%)
@@ -30,3 +40,9 @@
         +shape(0.7rem, 0.3rem, 50%)
         box-shadow: 2px 1px 0px rgb(213, 213, 213)
         background: #f9f9f9
+
++media-breakpoint-up(mobile)
+  .feed .items
+    display: flex
+    div
+      flex: 1

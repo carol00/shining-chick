@@ -21,4 +21,24 @@ const Rice = () =>
   )}
 </div>
 
-export {Plate, Bowl}
+const Grain = () =>
+<div>
+  <img src="images/grain.png" />
+</div>
+
+const Vegetables = () =>
+<div>
+  <img src="images/vegetables.png" />
+</div>
+
+const Bread = () =>
+<div>
+  <img src="images/bread.png" />
+</div>
+
+const Juice = () =>
+<div>
+  <img src="images/juice.png" />
+</div>
+
+export {Grain, Vegetables, Bread, Juice}

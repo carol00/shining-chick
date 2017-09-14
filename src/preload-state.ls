@@ -1,7 +1,9 @@
 function preload-state
   profile: {}
   feed:
-    rice: name: \Rice satisfaction: 1
-    beef: name: \Beef satisfaction: 2
+    grain: name: \Grain satisfaction: 1
+    bread: name: \Bread satisfaction: 2
+    vegetables: name: \Vegetables satisfaction: 1
+    juice: name: \Juice satisfaction: 1
 
 export default: preload-state

@@ -1,11 +1,13 @@
 import
   \./link : {link}
   \./feed-screen : feed-screen
-  \./food : {Bowl, Plate}
+  \./food : {Grain, Vegetables, Juice, Bread}
 
 food =
-  rice: Bowl
-  beef: Plate
+  grain: Grain
+  juice: Juice
+  vegetables: Vegetables
+  bread: Bread
 
 function feed-props {feed} bind-action
   items: Object.entries(feed).map ([id, value]) ->
