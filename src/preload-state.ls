@@ -1,4 +1,5 @@
 function preload-state
+  location: pathname: \home
   profile: {}
   feed:
     grain: name: \Grain satisfaction: 1

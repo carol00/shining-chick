@@ -4,10 +4,10 @@ export default ({name, birthday, satisfaction}) =>
 <div class="profile">
   <div class="items">
     <div>
-      <label>Name：</label><span></span>
+      <label>Name：</label><span>{name}</span>
     </div>
     <div>
-      <label>Birthday：</label><span></span>
+      <label>Birthday：</label><span>{birthday}</span>
     </div>
     <div>
       <label>Satisfaction：</label><span>{satisfaction}</span>

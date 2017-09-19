@@ -1,4 +1,4 @@
-import \../src/profile : {profile-state, updaters}
+import \../src/profile : {profile-state, updaters, create}
 import \../test/mock : {mock-bind}
 
 function main t
@@ -21,7 +21,8 @@ function main t
   t.deep-equal actual, expected, 'set input name'
 
   state = input: \babo
-  q = updaters.create state
+  payload = now: \now
+  q = updaters.create state, payload
   actual = q.name
   expected = \babo
   t.equal actual, expected, 'set current name'
@@ -29,6 +30,10 @@ function main t
   actual = q.satisfaction
   expected = 5
   t.equal actual, expected, 'set initial satisfaction'
+
+  actual = q.birthday
+  expected = payload.now
+  t.is actual, expected, 'show the current time'
 
   state = satisfaction: 5
   payload = satisfaction: 2

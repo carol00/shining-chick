@@ -1,12 +1,13 @@
 import \../src/home : {home-props}
 import \../test/mock : {mock-bind}
+import \../src/profile : {create}
 
 function main t
   profile = name: \babo satisfaction: 5
 
   props = home-props profile, mock-bind
   actual = props.on-click
-  expected = type: \create
+  expected = create!
   t.deep-equal actual, expected, 'click to create a chick'
 
   actual = props.on-change
@@ -20,6 +21,11 @@ function main t
   actual = props.satisfaction
   expected = 5
   t.equal actual, expected, 'satisfaction for display'
+
+  actual = create!
+  expected = type: \create payload: now:
+    new Date().toJSON().slice(0, 19).replace('T', ' ')
+  t.same actual, expected, 'set the current time'
 
   t.end!
 
