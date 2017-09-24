@@ -13,6 +13,7 @@ function main t
     name: \babo
     birthday: '2017-07-29 18:26'
     satisfaction: 5
+    ghost: void
   t.deep-equal actual, expected, 'Take the state of profile'
 
   payload = \ha
@@ -36,10 +37,15 @@ function main t
   t.is actual, expected, 'show the current time'
 
   state = satisfaction: 5
-  payload = satisfaction: 2
-  actual = updaters.feed state, payload
-  expected = satisfaction: 7
-  t.same actual, expected, 'After feeding to increase satisfaction'
+  payload = satisfaction: 11
+  q = updaters.feed state, payload
+  actual = q.satisfaction
+  expected = 16
+  t.is actual, expected, 'after feeding to increase satisfaction'
+
+  actual = q.ghost
+  expected = true
+  t.is actual, expected, 'show cute ghost'
 
   t.end!
 

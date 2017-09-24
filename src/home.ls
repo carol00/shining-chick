@@ -8,6 +8,7 @@ function home-props profile, bind-action
   on-change: bind-action input-name
   name: profile.name
   satisfaction: profile.satisfaction
+  ghost: profile.ghost
 
 Home = link home-screen, profile-state, home-props
 

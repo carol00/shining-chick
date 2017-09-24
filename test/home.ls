@@ -3,7 +3,7 @@ import \../test/mock : {mock-bind}
 import \../src/profile : {create}
 
 function main t
-  profile = name: \babo satisfaction: 5
+  profile = name: \babo satisfaction: 5 ghost: void
 
   props = home-props profile, mock-bind
   actual = props.on-click
@@ -21,6 +21,9 @@ function main t
   actual = props.satisfaction
   expected = 5
   t.equal actual, expected, 'satisfaction for display'
+
+  actual = props.ghost
+  t.false actual, 'set whether show to ghost'
 
   actual = create!
   expected = type: \create payload: now:

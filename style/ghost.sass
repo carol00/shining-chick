@@ -1,0 +1,42 @@
+.ghost
+  +shape(100%, 100%, 0)
+  opacity: 0.5
+  > *
+    margin: 0 auto
+  .body
+    +shape(150px, 150px, 50% 50% 0 0)
+    background: #FFF
+    box-shadow: 5px 2px 12px #000
+    .eyes span
+      +shape(20px, 45px, 1% 1% 50% 50%)
+      position: absolute
+      transform: translate(30px, 45px)
+      background: #000
+      box-shadow: 1px 0px 3px #000
+      &:last-child
+        transform: translate(80px, 45px)
+    .hand span
+      +shape(35px, 40px, 15% 15% 50% 50%)
+      position: absolute
+      background: #cecece
+      box-shadow: 0px 4px 7px #000
+      transform: translate(-15px, 80px)
+      &:last-child
+        transform: translate(110px, 80px)
+      &:before, &:after
+        +shape(12px, 1px, 0)
+        content: ''
+        background: #6b6969
+        position: absolute
+        transform: rotate(90deg) translate(30px, -5px)
+      &:after
+        transform: rotate(90deg) translate(30px, -20px)
+  .foot
+    +shape(150px, 40px, 0)
+    display: flex
+    span
+      display: inline-block
+      flex: 1
+      height: 25px
+      border-radius: 0 0 25% 75%
+      background: #FFF

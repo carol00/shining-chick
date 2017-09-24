@@ -10,15 +10,19 @@ initial-satifaction = 5
 
 updaters =
   create: (profile, payload) ->
-    name: profile.input, satisfaction: initial-satifaction, birthday: payload.now
+    name: profile.input, satisfaction: initial-satifaction
+    birthday: payload.now
   \input-name : (, payload) -> input: payload
   feed: (state, payload) ->
-    satisfaction: state.satisfaction + payload.satisfaction
+    satisfaction = state.satisfaction + payload.satisfaction
+    satisfaction: satisfaction
+    ghost: satisfaction > 10 || satisfaction <= 0
 
 function profile-state {profile}
   name: profile.name
   birthday: profile.birthday
   satisfaction: profile.satisfaction
+  ghost: profile.ghost
 
 function input-name target: {value}
   type: \input-name payload: value
