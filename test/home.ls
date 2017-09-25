@@ -26,8 +26,7 @@ function main t
   t.false actual, 'set whether show to ghost'
 
   actual = create!
-  expected = type: \create payload: now:
-    new Date().toJSON().slice(0, 19).replace('T', ' ')
+  expected = type: \create payload: now: new Date().toJSON()
   t.same actual, expected, 'set the current time'
 
   t.end!

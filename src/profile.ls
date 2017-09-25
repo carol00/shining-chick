@@ -1,10 +1,10 @@
 import
   \./link : {link}
   \./profile-screen : profile-screen
+  moment
 
 function create
-  create = type: \create payload: now:
-    new Date().toJSON().slice(0, 19).replace('T', ' ')
+  type: \create payload: now: new Date().toJSON()
 
 initial-satifaction = 5
 
@@ -20,7 +20,7 @@ updaters =
 
 function profile-state {profile}
   name: profile.name
-  birthday: profile.birthday
+  birthday: moment(profile.birthday).format('GGGG-MM-DD kk:mm:ss')
   satisfaction: profile.satisfaction
   ghost: profile.ghost
 

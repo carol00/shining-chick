@@ -36,6 +36,7 @@
     "linking": "next",
     "livescript": "",
     "livescript-next": "",
+    "moment": "",
     "node-sass": "",
     "nyc": "",
     "preact": "",

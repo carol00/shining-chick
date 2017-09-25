@@ -5,13 +5,13 @@ function main t
   state =
     profile:
       name: \babo
-      birthday: '2017-07-29 18:26'
+      birthday: '2017-09-21T12:26:01.839Z'
       satisfaction: 5
 
   actual = profile-state state
   expected =
     name: \babo
-    birthday: '2017-07-29 18:26'
+    birthday: '2017-09-21 20:26:01'
     satisfaction: 5
     ghost: void
   t.deep-equal actual, expected, 'Take the state of profile'
