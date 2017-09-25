@@ -28,7 +28,11 @@ base-plugins =
   new webpack.NamedModulesPlugin
   new HtmlPlugin title: 'Shining Chick'
 
-start-list = [\/ \/?utm_source=homescreen]
+start-list =
+  \/
+  \/?utm_source=homescreen
+  \https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
 function include-start
   {revision} = it.find -> /index\.html/test it.url
   start-list.map (-> {url: it, revision}) .concat it
@@ -54,7 +58,7 @@ env-options =
 
     entry:
       main: \./src/index.ls
-      vendor: <[redux preact linking]>
+      vendor: \./src/vendor.ls
     output:
       path: public-path
       filename: '[name].js'
