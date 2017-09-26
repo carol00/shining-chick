@@ -9,9 +9,18 @@
     transform: rotate(-5deg)
 
 .chick
-  animation: jump 0.2s ease-in infinite
+  animation: jump 0.3s ease-in infinite
 @keyframes jump
   50%
     transform: translate(0, -2px)
   100%
     transform: translate(0, 0)
+
+.zoom
+  animation: zoom 0.3s infinite 0.5s
+@keyframes zoom
+  50%
+    transform: scale(0.9)
+    background: rgba(150, 150, 150, 0.14)
+  100%
+    transform: scale(1)

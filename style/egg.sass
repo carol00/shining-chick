@@ -1,6 +1,6 @@
 $egg: 16rem
 $egg-height: 22rem
-$burst-angle: 41deg
+$burst-angle: 42deg
 
 .egg
   +shape($egg, $egg-height, 50% 50% 35% 35%)
@@ -31,8 +31,8 @@ $burst-angle: 41deg
   @for $i from 1 through 6
     &:nth-of-type(6n+#{$i}):after
       opacity: 1
-      transition: 2s opacity
+      transition: 1.5s opacity
 
 .egg.burst
-  transition: 1s opacity 1s
+  transition: 1s opacity 0.5s
   opacity: 0

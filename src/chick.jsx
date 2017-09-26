@@ -33,6 +33,10 @@ const Feet = () =>
   <div></div>
 </div>
 
+const Shadow = () =>
+<div class="shadow zoom">
+</div>
+
 export default () =>
 <div class="chick">
   <div class="body">
@@ -42,4 +46,5 @@ export default () =>
     <Hand />
   </div>
   <Feet />
+  <Shadow />
 </div>

@@ -1,14 +1,16 @@
+$hp-h: 0.7rem
+
 .indicator
-  +shape(10rem, 1rem, 5%)
+  +shape(10rem, $hp-h, 5%)
   position: relative
-  margin: 0 auto
+  margin: 1rem auto 0 auto
   border: 1px #314cb1 solid
-  background: #92b1ea
+  background: #aac1ea
   > div
     display: flex
     align-items: center
     justify-content: flex-start
     span
-      +shape(1rem, 1rem, 5%)
+      +shape(1rem, #{$hp-h - 0.1rem}, 5%)
       display: block
       background: #3f52b1

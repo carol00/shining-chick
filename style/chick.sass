@@ -72,6 +72,7 @@ $chick-feet: 0.6rem
       position: relative
       display: inline-block
       margin: 0 1.5rem 0 0
+      z-index: -1
       background: #171717
       &:last-of-type
         margin: 0 0 0 1.5rem
@@ -84,3 +85,7 @@ $chick-feet: 0.6rem
         background: #171717
       &:after
         transform: rotate(-55deg) translate(5px,5px)
+  .shadow
+    +shape(#{$chick-body - 5rem}, 1rem, 50%)
+    margin: 0 auto
+    background: rgba(132, 132, 132, 0.28)

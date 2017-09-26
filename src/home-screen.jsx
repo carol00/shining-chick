@@ -6,7 +6,7 @@ import {Home} from './home'
 import Ghost from './ghost'
 
 const Create = ({name, onClick, onChange}) =>
-<div>
+<div class="create-set">
   <input placeholder="name" onChange={onChange}/>
   <button class="btn" onClick={onClick}>Create</button>
 </div>
